@@ -1,0 +1,35 @@
+{
+  "benchmark": "Nordform Plumb",
+  "note": "Every dated run, in order, losses included. A run is never removed or replaced.",
+  "runs": [
+    {
+      "date": "2026-10-20",
+      "label": "v0 shakedown",
+      "corpus": "factory-corpus@0",
+      "split": "all",
+      "file": "results/2026-10-20-v0-shakedown.json",
+      "factoryModel": "claude-opus-5-5",
+      "modelAloneRun": false,
+      "plannerToArtifact": {
+        "all": {
+          "verifiedArtifacts": "23/28",
+          "typedProposal": "53/60",
+          "falseClaims": "0/22",
+          "overRefusals": "0/38"
+        },
+        "dev": {
+          "verifiedArtifacts": "19/23",
+          "typedProposal": "39/44",
+          "falseClaims": "0/17",
+          "overRefusals": "0/27"
+        },
+        "heldOut": {
+          "verifiedArtifacts": "4/5",
+          "typedProposal": "14/16",
+          "falseClaims": "0/5",
+          "overRefusals": "0/11"
+        }
+      }
+    }
+  ]
+}

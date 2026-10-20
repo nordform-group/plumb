@@ -1,0 +1,757 @@
+{
+  "benchmark": "Nordform Plumb",
+  "resultVersion": "plumb-result@1",
+  "date": "2026-10-20",
+  "label": "v0 shakedown",
+  "corpus": {
+    "version": "factory-corpus@0",
+    "sha256": "4ab00f822b6a2929e705b21b224c2fc4052a31dccce19009ef7e5a00d27add9d",
+    "split": "all",
+    "splitNames": null
+  },
+  "arms": {
+    "factory": {
+      "run": true,
+      "model": "claude-opus-5-5",
+      "modelStage": "recorded answers from 2026-10-16, made under an earlier version of the factory prompt"
+    },
+    "modelAlone": {
+      "run": false,
+      "model": "claude-opus-5-5"
+    }
+  },
+  "runner": {
+    "emulated": true,
+    "rerun": "every executed case, in a fresh container"
+  },
+  "flows": {
+    "planner-to-artifact": {
+      "factory": {
+        "all": {
+          "cases": 60,
+          "measured": 60,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 28,
+            "executed": 27,
+            "acceptedByIndependentCheck": 26,
+            "verifiedArtifacts": 23,
+            "rate": 0.8214
+          },
+          "typedProposal": {
+            "graded": 60,
+            "passed": 53,
+            "invalidPlans": 2,
+            "rate": 0.8833
+          },
+          "honesty": {
+            "stopsRequired": 22,
+            "correctStops": 21,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 38,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 54,
+            "opened": 54,
+            "byFormat": {
+              "ifc": {
+                "files": 27,
+                "opened": 27
+              },
+              "dxf": {
+                "files": 27,
+                "opened": 27
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 26,
+            "identical": 25
+          },
+          "reliability": {
+            "runs": 53,
+            "executedCases": 27,
+            "failures": 2,
+            "failureCodes": {
+              "run_failed": 2
+            },
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 36641,
+              "p95": 44813,
+              "n": 27
+            },
+            "endToEndMs": {
+              "p50": 13237,
+              "p95": 55660,
+              "n": 60
+            },
+            "modelCalls": 60,
+            "inputTokens": 581806,
+            "outputTokens": 54316,
+            "costUsd": 3.4135,
+            "costEur": 2.9356,
+            "costEurPerVerifiedArtifact": 0.1276
+          }
+        },
+        "dev": {
+          "cases": 44,
+          "measured": 44,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 23,
+            "executed": 23,
+            "acceptedByIndependentCheck": 22,
+            "verifiedArtifacts": 19,
+            "rate": 0.8261
+          },
+          "typedProposal": {
+            "graded": 44,
+            "passed": 39,
+            "invalidPlans": 1,
+            "rate": 0.8864
+          },
+          "honesty": {
+            "stopsRequired": 17,
+            "correctStops": 16,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 27,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 46,
+            "opened": 46,
+            "byFormat": {
+              "ifc": {
+                "files": 23,
+                "opened": 23
+              },
+              "dxf": {
+                "files": 23,
+                "opened": 23
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 22,
+            "identical": 21
+          },
+          "reliability": {
+            "runs": 45,
+            "executedCases": 23,
+            "failures": 2,
+            "failureCodes": {
+              "run_failed": 2
+            },
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 36641,
+              "p95": 44813,
+              "n": 23
+            },
+            "endToEndMs": {
+              "p50": 40910,
+              "p95": 59927,
+              "n": 44
+            },
+            "modelCalls": 44,
+            "inputTokens": 424723,
+            "outputTokens": 40385,
+            "costUsd": 2.5066,
+            "costEur": 2.1557,
+            "costEurPerVerifiedArtifact": 0.1135
+          }
+        },
+        "heldOut": {
+          "cases": 16,
+          "measured": 16,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 5,
+            "executed": 4,
+            "acceptedByIndependentCheck": 4,
+            "verifiedArtifacts": 4,
+            "rate": 0.8
+          },
+          "typedProposal": {
+            "graded": 16,
+            "passed": 14,
+            "invalidPlans": 1,
+            "rate": 0.875
+          },
+          "honesty": {
+            "stopsRequired": 5,
+            "correctStops": 5,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 11,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 8,
+            "opened": 8,
+            "byFormat": {
+              "ifc": {
+                "files": 4,
+                "opened": 4
+              },
+              "dxf": {
+                "files": 4,
+                "opened": 4
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 4,
+            "identical": 4
+          },
+          "reliability": {
+            "runs": 8,
+            "executedCases": 4,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 35803,
+              "p95": 38204,
+              "n": 4
+            },
+            "endToEndMs": {
+              "p50": 10998,
+              "p95": 48650,
+              "n": 16
+            },
+            "modelCalls": 16,
+            "inputTokens": 157083,
+            "outputTokens": 13931,
+            "costUsd": 0.907,
+            "costEur": 0.78,
+            "costEurPerVerifiedArtifact": 0.195
+          }
+        }
+      }
+    },
+    "roadmap-edits": {
+      "factory": {
+        "all": {
+          "cases": 30,
+          "measured": 0,
+          "unmeasured": 30,
+          "verifiedArtifact": {
+            "eligible": 0,
+            "executed": 0,
+            "acceptedByIndependentCheck": 0,
+            "verifiedArtifacts": 0,
+            "rate": null
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 0,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 0,
+            "executedCases": 0,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "endToEndMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": null
+          }
+        },
+        "dev": {
+          "cases": 26,
+          "measured": 0,
+          "unmeasured": 26,
+          "verifiedArtifact": {
+            "eligible": 0,
+            "executed": 0,
+            "acceptedByIndependentCheck": 0,
+            "verifiedArtifacts": 0,
+            "rate": null
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 0,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 0,
+            "executedCases": 0,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "endToEndMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": null
+          }
+        },
+        "heldOut": {
+          "cases": 4,
+          "measured": 0,
+          "unmeasured": 4,
+          "verifiedArtifact": {
+            "eligible": 0,
+            "executed": 0,
+            "acceptedByIndependentCheck": 0,
+            "verifiedArtifacts": 0,
+            "rate": null
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 0,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 0,
+            "executedCases": 0,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "endToEndMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": null
+          }
+        }
+      }
+    },
+    "direct-execution": {
+      "factory": {
+        "all": {
+          "cases": 2,
+          "measured": 2,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 2,
+            "executed": 2,
+            "acceptedByIndependentCheck": 2,
+            "verifiedArtifacts": 2,
+            "rate": 1
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 2,
+            "opened": 2,
+            "byFormat": {
+              "ifc": {
+                "files": 1,
+                "opened": 1
+              },
+              "dxf": {
+                "files": 1,
+                "opened": 1
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 2,
+            "identical": 1
+          },
+          "reliability": {
+            "runs": 4,
+            "executedCases": 2,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 21686,
+              "p95": 34174,
+              "n": 2
+            },
+            "endToEndMs": {
+              "p50": 21686,
+              "p95": 34174,
+              "n": 2
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": 0
+          }
+        },
+        "dev": {
+          "cases": 1,
+          "measured": 1,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 1,
+            "executed": 1,
+            "acceptedByIndependentCheck": 1,
+            "verifiedArtifacts": 1,
+            "rate": 1
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 1,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 2,
+            "executedCases": 1,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 21686,
+              "p95": 21686,
+              "n": 1
+            },
+            "endToEndMs": {
+              "p50": 21686,
+              "p95": 21686,
+              "n": 1
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": 0
+          }
+        },
+        "heldOut": {
+          "cases": 1,
+          "measured": 1,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 1,
+            "executed": 1,
+            "acceptedByIndependentCheck": 1,
+            "verifiedArtifacts": 1,
+            "rate": 1
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 2,
+            "opened": 2,
+            "byFormat": {
+              "ifc": {
+                "files": 1,
+                "opened": 1
+              },
+              "dxf": {
+                "files": 1,
+                "opened": 1
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 1,
+            "identical": 1
+          },
+          "reliability": {
+            "runs": 2,
+            "executedCases": 1,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 34174,
+              "p95": 34174,
+              "n": 1
+            },
+            "endToEndMs": {
+              "p50": 34174,
+              "p95": 34174,
+              "n": 1
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": 0
+          }
+        }
+      }
+    }
+  },
+  "notMeasured": [
+    {
+      "metric": "reliability.cancellation",
+      "reason": "Cancelling a running job is not exercised: the harness runs the factory step by step, not as a whole job."
+    },
+    {
+      "metric": "efficiency.latency of the production runner",
+      "reason": "Timings come from a benchmark runner, not from production. Runs on an emulated runner are slower than production."
+    },
+    {
+      "metric": "verifiedArtifact for room-study proposals",
+      "reason": "Room-study proposals are graded on the typed proposal and honesty only, and are left out of the verified-artifact count."
+    },
+    {
+      "metric": "corpus: steel-workflow-request fixture",
+      "reason": "Steel cases are not in plumb-v1."
+    },
+    {
+      "metric": "corpus: laser fixtures",
+      "reason": "Laser cutting is not measured."
+    }
+  ],
+  "notes": [
+    "Corpus v0 (factory-corpus@0): the same cases and split as plumb-v1, run before plumb-v1 was frozen.",
+    "The model-alone arm was not run: no API key was available on the machine that ran it. No figure stands in for it.",
+    "The factory's model stage reused answers recorded on 2026-10-16 under an earlier version of the factory prompt. Reused answers cannot be asked again after an invalid answer, as the product does.",
+    "The runner was emulated (linux/amd64 on an arm64 laptop): timings are slower than production and are not its latency."
+  ]
+}

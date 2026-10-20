@@ -1,0 +1,87 @@
+{
+  "name": "plumb-v1-heldout",
+  "cases": 20,
+  "note": "Held-out cases are not published. Each line is the SHA-256 of one case as stored, so a case released later can be matched to the numbers computed on it.",
+  "commitments": [
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "164291a58e5cc576d6d9aa25960516d2146e23b703badfa1eb506caa114adb2c"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "459692f6ac0782d771a6067c342d34a9139dbe33c844eba0ea1e8ceb88047586"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "47728eb1c8cf911f99c90836b12dbe33b1483cd0c3459a4184d2747d047a74c4"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "534fac08c5750bd66c0c982992defba4d967b2b7dc12953f4eb871487ccc1e9b"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "57ed07de149e7c001082c76fde76694e3910a4e870f8a0cdf08fdc9169f58443"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "64131e8f0df803303b449787613131c28d24b331b904b06709f5d90330feb72e"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "6873d9bb40896142bff43eb999ecbae54230af6399fe7342a533b07a394a3fa1"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "873fd2ce8bff8946c695ce53e02d3b4c1d445340e45a95c749378f5605f5f6ad"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "8b0e0e0fb801238044066c3cb3b6f8a514036f2090a10fbf9862adfcb3a61ed8"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "9871135a2d7cffb5f14b8190919ee7794b361f7d82e094d122102fb116257665"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "b61f03fe2f0c2d731974cc1675c68931f2b42df80eae0096e02de1cb1b6519e5"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "b7bcb0cd458eab830f2163984dccb6f5a08cceb917ff7b4c35fcc0e8839b51d0"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "ca0d94446e7f20e7bd431768f2b18b5ad470f726eeab4ed4890ec82c78ade368"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "d3171c88c4bfe5c31c2ce0a7cd548f0c6e1e4c995771274a6a3b37fc44427b04"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "dafce00a30060bed8c7ceddb0613bf3fdf130a1f0ff36fae6fcb9cc253ea2d35"
+    },
+    {
+      "flow": "planner-to-artifact",
+      "sha256": "ffdf79253c00437dbf15f67afd6944b0a1336b2806dc8fbf3798c5949d378e65"
+    },
+    {
+      "flow": "roadmap-edits",
+      "sha256": "2c7e5906a961d98cea5d3d5b6da1c7d604c5b2c8d29577bbc449025ecadf2d87"
+    },
+    {
+      "flow": "roadmap-edits",
+      "sha256": "6d0c813a18d172fc5b62e1f0389c1d5de5a4e61d7ca6b107e4561d4652ba42f9"
+    },
+    {
+      "flow": "roadmap-edits",
+      "sha256": "ad28ea2d53eddd7bb8450e0c93462dc9c45052c09ba62a4539bfa9326c3641eb"
+    },
+    {
+      "flow": "roadmap-edits",
+      "sha256": "afda4dc4eec26a2dce7f690c773529a9e8d4513a5d0d251f832e22199338ee0e"
+    }
+  ]
+}

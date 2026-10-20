@@ -1,0 +1,18 @@
+{
+  "name": "nordform-plumb",
+  "version": "1.0.0",
+  "description": "Nordform Plumb: an open benchmark for design factories",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "grade": "node graders/grade.mjs",
+    "model-alone": "node runners/model-alone.mjs"
+  },
+  "dependencies": {
+    "zod": "4.5.4"
+  }
+}

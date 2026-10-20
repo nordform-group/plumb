@@ -1,0 +1,957 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "workflow": {
+      "type": "string",
+      "enum": [
+        "inspect-design@1",
+        "edit-envelope@1",
+        "edit-openings@1",
+        "resolve-feedback@1",
+        "compare-alternatives@1",
+        "prepare-outputs@1",
+        "edit-rooms@1"
+      ]
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "proposal",
+        "answer",
+        "clarification",
+        "unsupported",
+        "outputs"
+      ]
+    },
+    "outcomeProbabilities": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "proposal",
+          "answer",
+          "clarification",
+          "unsupported",
+          "outputs"
+        ]
+      },
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "required": [
+        "proposal",
+        "answer",
+        "clarification",
+        "unsupported",
+        "outputs"
+      ]
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "assumptions": {
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    },
+    "assumptionProposals": {
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "comparator": {
+            "type": "string",
+            "enum": [
+              "<",
+              "<=",
+              "=",
+              ">=",
+              ">"
+            ]
+          },
+          "threshold": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "decision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "checkOn": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "evidenceSource": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "sourceQuote": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "metric",
+          "comparator",
+          "threshold",
+          "unit",
+          "decision",
+          "sourceQuote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "suggestedActions": {
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,31}$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "request": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "answerBasis": {
+      "type": "string",
+      "enum": [
+        "design",
+        "kit",
+        "regulation",
+        "engineering"
+      ]
+    },
+    "references": {
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "packageId": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "excerpt": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 700
+          }
+        },
+        "required": [
+          "packageId",
+          "excerpt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "heuristics": {
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]{0,59}@\\d{1,3}$"
+      }
+    },
+    "unresolved": {
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      }
+    },
+    "options": {
+      "minItems": 2,
+      "maxItems": 4,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,31}$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "choice",
+              "number",
+              "boolean"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          },
+          "unit": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string",
+            "enum": [
+              "storeys",
+              "width",
+              "length",
+              "height",
+              "pitch"
+            ]
+          },
+          "openingId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "type",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "candidates": {
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,31}$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "operations": {
+            "minItems": 1,
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "set-roof-overhang"
+                    },
+                    "value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 0.8
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "set-opening-framing"
+                    },
+                    "value": {
+                      "type": "string",
+                      "const": "king-jack@1"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "set-dimension"
+                    },
+                    "key": {
+                      "type": "string",
+                      "enum": [
+                        "width",
+                        "length",
+                        "height",
+                        "pitch"
+                      ]
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "key",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "set-storeys"
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "const": 1
+                        },
+                        {
+                          "type": "number",
+                          "const": 2
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "set-stair"
+                    },
+                    "x": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 16
+                    },
+                    "direction": {
+                      "type": "string",
+                      "enum": [
+                        "x",
+                        "y"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "x",
+                    "y",
+                    "direction"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "add-opening"
+                    },
+                    "opening": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9-]{0,31}$"
+                        },
+                        "wall": {
+                          "type": "string",
+                          "enum": [
+                            "front",
+                            "rear",
+                            "left",
+                            "right"
+                          ]
+                        },
+                        "kind": {
+                          "type": "string",
+                          "enum": [
+                            "door",
+                            "window"
+                          ]
+                        },
+                        "offset": {
+                          "type": "number",
+                          "minimum": 0.3
+                        },
+                        "width": {
+                          "type": "number",
+                          "minimum": 0.4,
+                          "maximum": 2.4
+                        },
+                        "height": {
+                          "type": "number",
+                          "minimum": 0.4,
+                          "maximum": 2.4
+                        },
+                        "sill": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 2.5
+                        },
+                        "storey": {
+                          "anyOf": [
+                            {
+                              "type": "number",
+                              "const": 1
+                            },
+                            {
+                              "type": "number",
+                              "const": 2
+                            }
+                          ]
+                        },
+                        "product": {
+                          "type": "object",
+                          "properties": {
+                            "productId": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                            },
+                            "variantId": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                            },
+                            "options": {
+                              "maxItems": 8,
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "optionId": {
+                                    "type": "string",
+                                    "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                                  },
+                                  "valueId": {
+                                    "type": "string",
+                                    "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                                  }
+                                },
+                                "required": [
+                                  "optionId",
+                                  "valueId"
+                                ],
+                                "additionalProperties": false
+                              }
+                            }
+                          },
+                          "required": [
+                            "productId"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "wall",
+                        "kind",
+                        "offset",
+                        "width",
+                        "height",
+                        "sill"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "opening"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "update-opening"
+                    },
+                    "id": {
+                      "type": "string",
+                      "maxLength": 32
+                    },
+                    "changes": {
+                      "type": "object",
+                      "properties": {
+                        "wall": {
+                          "type": "string",
+                          "enum": [
+                            "front",
+                            "rear",
+                            "left",
+                            "right"
+                          ]
+                        },
+                        "kind": {
+                          "type": "string",
+                          "enum": [
+                            "door",
+                            "window"
+                          ]
+                        },
+                        "offset": {
+                          "type": "number",
+                          "minimum": 0.3
+                        },
+                        "width": {
+                          "type": "number",
+                          "minimum": 0.4,
+                          "maximum": 2.4
+                        },
+                        "height": {
+                          "type": "number",
+                          "minimum": 0.4,
+                          "maximum": 2.4
+                        },
+                        "sill": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 2.5
+                        },
+                        "storey": {
+                          "anyOf": [
+                            {
+                              "type": "number",
+                              "const": 1
+                            },
+                            {
+                              "type": "number",
+                              "const": 2
+                            }
+                          ]
+                        },
+                        "product": {
+                          "type": "object",
+                          "properties": {
+                            "productId": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                            },
+                            "variantId": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                            },
+                            "options": {
+                              "maxItems": 8,
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "optionId": {
+                                    "type": "string",
+                                    "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                                  },
+                                  "valueId": {
+                                    "type": "string",
+                                    "pattern": "^[a-z][a-z0-9-]{0,39}$"
+                                  }
+                                },
+                                "required": [
+                                  "optionId",
+                                  "valueId"
+                                ],
+                                "additionalProperties": false
+                              }
+                            }
+                          },
+                          "required": [
+                            "productId"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "id",
+                    "changes"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "remove-opening"
+                    },
+                    "id": {
+                      "type": "string",
+                      "maxLength": 32
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "add-room"
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    },
+                    "storey": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "const": 1
+                        },
+                        {
+                          "type": "number",
+                          "const": 2
+                        }
+                      ]
+                    },
+                    "use": {
+                      "type": "string",
+                      "enum": [
+                        "habitable",
+                        "kitchen",
+                        "bathroom",
+                        "sauna",
+                        "hall",
+                        "storage",
+                        "technical"
+                      ]
+                    },
+                    "size": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "width": {
+                              "type": "number",
+                              "minimum": 0.3,
+                              "maximum": 10
+                            },
+                            "depth": {
+                              "type": "number",
+                              "minimum": 0.3,
+                              "maximum": 16
+                            }
+                          },
+                          "required": [
+                            "width",
+                            "depth"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "area": {
+                              "type": "number",
+                              "minimum": 0.09,
+                              "maximum": 160
+                            }
+                          },
+                          "required": [
+                            "area"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "at": {
+                      "type": "object",
+                      "properties": {
+                        "x": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 10
+                        },
+                        "y": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 16
+                        }
+                      },
+                      "required": [
+                        "x",
+                        "y"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "name",
+                    "size"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "split-room"
+                    },
+                    "roomId": {
+                      "type": "string",
+                      "format": "uuid",
+                      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                    },
+                    "axis": {
+                      "type": "string",
+                      "enum": [
+                        "x",
+                        "y"
+                      ]
+                    },
+                    "cut": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "distance": {
+                              "type": "number",
+                              "minimum": 0.3,
+                              "maximum": 16
+                            }
+                          },
+                          "required": [
+                            "distance"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "ratio": {
+                              "type": "number",
+                              "minimum": 0.05,
+                              "maximum": 0.95
+                            }
+                          },
+                          "required": [
+                            "ratio"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "names": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 120
+                        },
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 120
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "roomId",
+                    "axis",
+                    "cut",
+                    "names"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "merge-rooms"
+                    },
+                    "roomIds": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                        },
+                        {
+                          "type": "string",
+                          "format": "uuid",
+                          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "roomIds",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "rename-room"
+                    },
+                    "roomId": {
+                      "type": "string",
+                      "format": "uuid",
+                      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "roomId",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "resize-room"
+                    },
+                    "roomId": {
+                      "type": "string",
+                      "format": "uuid",
+                      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                    },
+                    "edge": {
+                      "type": "string",
+                      "enum": [
+                        "front",
+                        "rear",
+                        "left",
+                        "right"
+                      ]
+                    },
+                    "to": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 16
+                    },
+                    "by": {
+                      "type": "number",
+                      "minimum": -16,
+                      "maximum": 16
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "roomId",
+                    "edge"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "operations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "workflow",
+    "outcome",
+    "explanation",
+    "unresolved",
+    "candidates"
+  ],
+  "additionalProperties": false
+}

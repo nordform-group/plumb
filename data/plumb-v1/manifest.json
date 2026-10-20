@@ -1,0 +1,36 @@
+{
+  "benchmark": "Nordform Plumb",
+  "corpus": "plumb-v1",
+  "frozenAt": "2026-10-20",
+  "splits": {
+    "dev": "plumb-v1",
+    "heldOut": "plumb-v1-heldout"
+  },
+  "splitRule": "A case is held out when the first hex digit of sha256(\"factory-corpus@0:\" + flow + \"/\" + id) is 0, 1 or 2.",
+  "flows": {
+    "planner-to-artifact": {
+      "dev": 44,
+      "heldOut": 16,
+      "published": "dev.jsonl"
+    },
+    "roadmap-edits": {
+      "dev": 26,
+      "heldOut": 4,
+      "published": "not yet: graded only inside the factory in plumb-v1"
+    },
+    "direct-execution": {
+      "dev": 1,
+      "heldOut": 1,
+      "published": "not published: these cases are requests to the factory itself"
+    }
+  },
+  "tolerance": {
+    "lengthM": 0.001,
+    "angleDeg": 0.01,
+    "rule": "Planner cases are graded on the exact expected operations (graders/grade.mjs). Tolerances apply to typed parameters where a flow compares parameter sets."
+  },
+  "modelAlonePrompt": {
+    "file": "prompts/model-alone-system.txt",
+    "sha256": "b19c55273163cbb528e2a30f663dd48f0cf94736d481baf52810fdbc050597e0"
+  }
+}

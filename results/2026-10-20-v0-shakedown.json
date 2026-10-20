@@ -3,6 +3,9 @@
   "resultVersion": "plumb-result@1",
   "date": "2026-10-20",
   "label": "v0 shakedown",
+  "code": {
+    "revision": "356e605057ba9bf2fa911d8f198b7b3bc3307929"
+  },
   "corpus": {
     "version": "factory-corpus@0",
     "sha256": "4ab00f822b6a2929e705b21b224c2fc4052a31dccce19009ef7e5a00d27add9d",

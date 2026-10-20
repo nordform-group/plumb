@@ -1,8 +1,12 @@
 {
   "name": "plumb-v1-heldout",
-  "cases": 20,
+  "cases": 21,
   "note": "Held-out cases are not published. Each line is the SHA-256 of one case as stored, so a case released later can be matched to the numbers computed on it.",
   "commitments": [
+    {
+      "flow": "direct-execution",
+      "sha256": "ea01830cb2484d0c1370fe1f0b2844a2eb6319fe2d64a6fb7171f221c94864ee"
+    },
     {
       "flow": "planner-to-artifact",
       "sha256": "164291a58e5cc576d6d9aa25960516d2146e23b703badfa1eb506caa114adb2c"

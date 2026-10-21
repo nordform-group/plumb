@@ -1,7 +1,7 @@
 {
   "name": "nordform-plumb",
   "version": "1.0.0",
-  "description": "Nordform Plumb: an open benchmark for design factories",
+  "description": "Nordform Trueline: an open benchmark for design factories",
   "license": "Apache-2.0",
   "private": true,
   "type": "module",

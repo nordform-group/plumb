@@ -1,14 +1,17 @@
-# Nordform Plumb
+# Nordform Trueline
 
-Nordform Plumb is an open benchmark for design factories: systems that take a building brief in
+Nordform Trueline is an open benchmark for design factories: systems that take a building brief in
 plain language and return a design. It asks a narrow question. When a brief goes through the
 factory, how often does a checked, readable design come out? How often does the factory stop when
 it should, and refuse nothing it could do? What does that cost, compared with the same model asked
 on its own?
 
-Plumb borrows its shape from benchmarks people trust: an open case set, graders anyone can rerun,
+Trueline borrows its shape from benchmarks people trust: an open case set, graders anyone can rerun,
 named baselines, several measures instead of one score, and dated runs that keep their losses.
 Nordform builds a design factory and publishes its own results here, the bad runs included.
+
+The benchmark was published as Nordform Plumb until 21 October 2026. Its first corpus keeps the
+identifier `plumb-v1`, and results recorded before the rename keep the old name.
 
 ## What is in this repository
 
@@ -118,7 +121,7 @@ own repository and publishes the results here.
 ## Results
 
 `results/history.json` lists every dated run in order. A result is never replaced or removed, and
-every run that covers the held-out split is published, whatever it shows. Nordform reruns Plumb
+every run that covers the held-out split is published, whatever it shows. Nordform reruns Trueline
 when the factory's kernels, checks, prompt, context or model change.
 
 **2026-10-20, v0 shakedown.** The first run, on corpus v0 (the same cases and split as plumb-v1,
@@ -146,13 +149,13 @@ rest on five cases and are not a rate. The full figures are in
 
 The code (`graders/`, `runners/`, `adapters/`, `readers/`, `schema/`, `prompts/`) is licensed under
 the Apache License 2.0 (`LICENSE`). The data (`data/` and `results/`) is licensed under Creative
-Commons Attribution 4.0 International (`data/LICENSE`). Attribute it as "Nordform Plumb, Nordform
+Commons Attribution 4.0 International (`data/LICENSE`). Attribute it as "Nordform Trueline, Nordform
 Group Oy". The manufacturer cases cite a public product page and restate the figures it publishes;
 the page itself is not reproduced.
 
 ## Citing
 
 ```
-Nordform Plumb: an open benchmark for design factories. Nordform Group Oy, 2026.
+Nordform Trueline: an open benchmark for design factories. Nordform Group Oy, 2026.
 Corpus plumb-v1.
 ```

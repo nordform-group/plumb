@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Open delivered concept IFC and DXF bytes with the independent readers (Nordform Plumb).
+"""Open delivered concept IFC and DXF bytes with the independent readers (Nordform Trueline).
 
 Usage: python3 readers/open_files.py <dir>, where <dir>/manifest.json lists
 [{"case", "file", "format": "ifc"|"dxf", "sha256"}]. Our own parser never counts as evidence

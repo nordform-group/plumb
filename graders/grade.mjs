@@ -1,4 +1,4 @@
-// Nordform Plumb grader. SPDX-License-Identifier: Apache-2.0
+// Nordform Trueline grader. SPDX-License-Identifier: Apache-2.0
 //
 // Grades typed design proposals against the plumb-v1 cases, and adds graded rows up into the
 // numbers a result reports. It needs only `zod` and the plan schema in ../schema/plan.schema.json.

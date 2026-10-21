@@ -1,4 +1,4 @@
-// Nordform Plumb, the factory adapter. SPDX-License-Identifier: Apache-2.0
+// Nordform Trueline, the factory adapter. SPDX-License-Identifier: Apache-2.0
 //
 // Runs each case through a design factory and grades what comes back: the typed proposal by
 // graders/grade.mjs, the delivered IFC and DXF files by readers/open_files.py (ifcopenshell and

@@ -1,4 +1,4 @@
-// Nordform Plumb, the model-alone arm. SPDX-License-Identifier: Apache-2.0
+// Nordform Trueline, the model-alone arm. SPDX-License-Identifier: Apache-2.0
 //
 // Asks a model for the typed proposal each case calls for, with nothing but the case and the plan
 // schema: no factory prompt, no catalogue, no kernel, no checks. Writes one answer per line, which

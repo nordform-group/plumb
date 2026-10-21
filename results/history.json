@@ -59,6 +59,35 @@
           "overRefusals": "0/11"
         }
       }
+    },
+    {
+      "date": "2026-10-21",
+      "label": "nightly c2dd1170",
+      "corpus": "plumb-v1",
+      "split": "all",
+      "file": "results/2026-10-21-nightly-c2dd1170.json",
+      "factoryModel": "claude-opus-5-5",
+      "modelAloneRun": true,
+      "plannerToArtifact": {
+        "all": {
+          "verifiedArtifacts": "24/28",
+          "typedProposal": "51/60",
+          "falseClaims": "0/22",
+          "overRefusals": "0/38"
+        },
+        "dev": {
+          "verifiedArtifacts": "20/23",
+          "typedProposal": "38/44",
+          "falseClaims": "0/17",
+          "overRefusals": "0/27"
+        },
+        "heldOut": {
+          "verifiedArtifacts": "4/5",
+          "typedProposal": "13/16",
+          "falseClaims": "0/5",
+          "overRefusals": "0/11"
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,6001 @@
+{
+  "benchmark": "Nordform Plumb",
+  "resultVersion": "plumb-result@1",
+  "date": "2026-10-21",
+  "label": "nightly c2dd1170",
+  "code": {
+    "revision": "c2dd117066b086fb3ef46e3765a1e7e09fbb8555"
+  },
+  "corpus": {
+    "version": "plumb-v1",
+    "sha256": "c83efea970bdd5029535bb491c4d56cf61d2e5ff1d7825d5d8658b837f76a0fc",
+    "split": "all",
+    "splitNames": {
+      "dev": "plumb-v1",
+      "heldOut": "plumb-v1-heldout"
+    }
+  },
+  "arms": {
+    "factory": {
+      "run": true,
+      "model": "claude-opus-5-5",
+      "modelStage": "asked live"
+    },
+    "modelAlone": {
+      "run": true,
+      "model": "claude-opus-5-5"
+    }
+  },
+  "runner": {
+    "emulated": false,
+    "rerun": "every executed case, in a fresh container"
+  },
+  "flows": {
+    "planner-to-artifact": {
+      "factory": {
+        "axes": {
+          "operations": {
+            "one": {
+              "cases": 25,
+              "typedGraded": 25,
+              "typedPassed": 23,
+              "eligible": 20,
+              "verifiedArtifacts": 20
+            },
+            "several": {
+              "cases": 7,
+              "typedGraded": 7,
+              "typedPassed": 3,
+              "eligible": 7,
+              "verifiedArtifacts": 3
+            },
+            "none": {
+              "cases": 28,
+              "typedGraded": 28,
+              "typedPassed": 25,
+              "eligible": 1,
+              "verifiedArtifacts": 1
+            }
+          },
+          "locks": {
+            "none": {
+              "cases": 55,
+              "typedGraded": 55,
+              "typedPassed": 47,
+              "eligible": 27,
+              "verifiedArtifacts": 23
+            },
+            "some": {
+              "cases": 5,
+              "typedGraded": 5,
+              "typedPassed": 4,
+              "eligible": 1,
+              "verifiedArtifacts": 1
+            }
+          },
+          "reference": {
+            "none": {
+              "cases": 54,
+              "typedGraded": 54,
+              "typedPassed": 49,
+              "eligible": 22,
+              "verifiedArtifacts": 22
+            },
+            "present": {
+              "cases": 6,
+              "typedGraded": 6,
+              "typedPassed": 2,
+              "eligible": 6,
+              "verifiedArtifacts": 2
+            }
+          },
+          "language": {
+            "en": {
+              "cases": 55,
+              "typedGraded": 55,
+              "typedPassed": 48,
+              "eligible": 25,
+              "verifiedArtifacts": 23
+            },
+            "fi": {
+              "cases": 5,
+              "typedGraded": 5,
+              "typedPassed": 3,
+              "eligible": 3,
+              "verifiedArtifacts": 1
+            }
+          }
+        },
+        "all": {
+          "cases": 60,
+          "measured": 60,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 28,
+            "executed": 28,
+            "acceptedByIndependentCheck": 28,
+            "verifiedArtifacts": 24,
+            "rate": 0.8571
+          },
+          "typedProposal": {
+            "graded": 60,
+            "passed": 51,
+            "invalidPlans": 3,
+            "rate": 0.85
+          },
+          "honesty": {
+            "stopsRequired": 22,
+            "correctStops": 19,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 38,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 58,
+            "opened": 58,
+            "byFormat": {
+              "ifc": {
+                "files": 29,
+                "opened": 29
+              },
+              "dxf": {
+                "files": 29,
+                "opened": 29
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 28,
+            "identical": 28
+          },
+          "reliability": {
+            "runs": 56,
+            "executedCases": 28,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 6161,
+              "p95": 7705,
+              "n": 28
+            },
+            "endToEndMs": {
+              "p50": 12084,
+              "p95": 19869,
+              "n": 60
+            },
+            "modelCalls": 60,
+            "inputTokens": 581806,
+            "outputTokens": 55121,
+            "costUsd": 3.4296,
+            "costEur": 2.9495,
+            "costEurPerVerifiedArtifact": 0.1229
+          }
+        },
+        "dev": {
+          "cases": 44,
+          "measured": 44,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 23,
+            "executed": 23,
+            "acceptedByIndependentCheck": 23,
+            "verifiedArtifacts": 20,
+            "rate": 0.8696
+          },
+          "typedProposal": {
+            "graded": 44,
+            "passed": 38,
+            "invalidPlans": 2,
+            "rate": 0.8636
+          },
+          "honesty": {
+            "stopsRequired": 17,
+            "correctStops": 15,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 27,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 48,
+            "opened": 48,
+            "byFormat": {
+              "ifc": {
+                "files": 24,
+                "opened": 24
+              },
+              "dxf": {
+                "files": 24,
+                "opened": 24
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 23,
+            "identical": 23
+          },
+          "reliability": {
+            "runs": 46,
+            "executedCases": 23,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 6190,
+              "p95": 7705,
+              "n": 23
+            },
+            "endToEndMs": {
+              "p50": 12402,
+              "p95": 24014,
+              "n": 44
+            },
+            "modelCalls": 44,
+            "inputTokens": 424723,
+            "outputTokens": 41185,
+            "costUsd": 2.5226,
+            "costEur": 2.1694,
+            "costEurPerVerifiedArtifact": 0.1085
+          }
+        },
+        "heldOut": {
+          "cases": 16,
+          "measured": 16,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 5,
+            "executed": 5,
+            "acceptedByIndependentCheck": 5,
+            "verifiedArtifacts": 4,
+            "rate": 0.8
+          },
+          "typedProposal": {
+            "graded": 16,
+            "passed": 13,
+            "invalidPlans": 1,
+            "rate": 0.8125
+          },
+          "honesty": {
+            "stopsRequired": 5,
+            "correctStops": 4,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 11,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 10,
+            "opened": 10,
+            "byFormat": {
+              "ifc": {
+                "files": 5,
+                "opened": 5
+              },
+              "dxf": {
+                "files": 5,
+                "opened": 5
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 5,
+            "identical": 5
+          },
+          "reliability": {
+            "runs": 10,
+            "executedCases": 5,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 6133,
+              "p95": 6699,
+              "n": 5
+            },
+            "endToEndMs": {
+              "p50": 10210,
+              "p95": 18532,
+              "n": 16
+            },
+            "modelCalls": 16,
+            "inputTokens": 157083,
+            "outputTokens": 13936,
+            "costUsd": 0.9071,
+            "costEur": 0.7801,
+            "costEurPerVerifiedArtifact": 0.195
+          }
+        }
+      },
+      "modelAlone": {
+        "axes": {
+          "operations": {
+            "one": {
+              "cases": 24,
+              "typedGraded": 24,
+              "typedPassed": 14,
+              "eligible": 19,
+              "verifiedArtifacts": 0
+            },
+            "several": {
+              "cases": 6,
+              "typedGraded": 6,
+              "typedPassed": 1,
+              "eligible": 6,
+              "verifiedArtifacts": 0
+            },
+            "none": {
+              "cases": 28,
+              "typedGraded": 28,
+              "typedPassed": 11,
+              "eligible": 1,
+              "verifiedArtifacts": 0
+            }
+          },
+          "locks": {
+            "none": {
+              "cases": 53,
+              "typedGraded": 53,
+              "typedPassed": 26,
+              "eligible": 25,
+              "verifiedArtifacts": 0
+            },
+            "some": {
+              "cases": 5,
+              "typedGraded": 5,
+              "typedPassed": 0,
+              "eligible": 1,
+              "verifiedArtifacts": 0
+            }
+          },
+          "reference": {
+            "none": {
+              "cases": 54,
+              "typedGraded": 54,
+              "typedPassed": 26,
+              "eligible": 22,
+              "verifiedArtifacts": 0
+            },
+            "present": {
+              "cases": 4,
+              "typedGraded": 4,
+              "typedPassed": 0,
+              "eligible": 4,
+              "verifiedArtifacts": 0
+            }
+          },
+          "language": {
+            "en": {
+              "cases": 53,
+              "typedGraded": 53,
+              "typedPassed": 24,
+              "eligible": 23,
+              "verifiedArtifacts": 0
+            },
+            "fi": {
+              "cases": 5,
+              "typedGraded": 5,
+              "typedPassed": 2,
+              "eligible": 3,
+              "verifiedArtifacts": 0
+            }
+          }
+        },
+        "all": {
+          "cases": 60,
+          "measured": 58,
+          "unmeasured": 2,
+          "verifiedArtifact": {
+            "eligible": 26,
+            "executed": 0,
+            "acceptedByIndependentCheck": 0,
+            "verifiedArtifacts": 0,
+            "rate": 0
+          },
+          "typedProposal": {
+            "graded": 58,
+            "passed": 26,
+            "invalidPlans": 26,
+            "rate": 0.4483
+          },
+          "honesty": {
+            "stopsRequired": 22,
+            "correctStops": 9,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 36,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 0,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 0,
+            "executedCases": 0,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "endToEndMs": {
+              "p50": 7075,
+              "p95": 14532,
+              "n": 58
+            },
+            "modelCalls": 58,
+            "inputTokens": 208278,
+            "outputTokens": 37109,
+            "costUsd": 1.5753,
+            "costEur": 1.3548,
+            "costEurPerVerifiedArtifact": null
+          }
+        },
+        "dev": {
+          "cases": 44,
+          "measured": 42,
+          "unmeasured": 2,
+          "verifiedArtifact": {
+            "eligible": 21,
+            "executed": 0,
+            "acceptedByIndependentCheck": 0,
+            "verifiedArtifacts": 0,
+            "rate": 0
+          },
+          "typedProposal": {
+            "graded": 42,
+            "passed": 19,
+            "invalidPlans": 18,
+            "rate": 0.4524
+          },
+          "honesty": {
+            "stopsRequired": 17,
+            "correctStops": 8,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 25,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 0,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 0,
+            "executedCases": 0,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "endToEndMs": {
+              "p50": 7075,
+              "p95": 14123,
+              "n": 42
+            },
+            "modelCalls": 42,
+            "inputTokens": 151032,
+            "outputTokens": 26318,
+            "costUsd": 1.1305,
+            "costEur": 0.9722,
+            "costEurPerVerifiedArtifact": null
+          }
+        },
+        "heldOut": {
+          "cases": 16,
+          "measured": 16,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 5,
+            "executed": 0,
+            "acceptedByIndependentCheck": 0,
+            "verifiedArtifacts": 0,
+            "rate": 0
+          },
+          "typedProposal": {
+            "graded": 16,
+            "passed": 7,
+            "invalidPlans": 8,
+            "rate": 0.4375
+          },
+          "honesty": {
+            "stopsRequired": 5,
+            "correctStops": 1,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 11,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 0,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 0,
+            "executedCases": 0,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": null,
+              "p95": null,
+              "n": 0
+            },
+            "endToEndMs": {
+              "p50": 6910,
+              "p95": 18134,
+              "n": 16
+            },
+            "modelCalls": 16,
+            "inputTokens": 57246,
+            "outputTokens": 10791,
+            "costUsd": 0.4448,
+            "costEur": 0.3825,
+            "costEurPerVerifiedArtifact": null
+          }
+        }
+      }
+    },
+    "roadmap-edits": {
+      "factory": {
+        "axes": {},
+        "all": {
+          "cases": 30,
+          "measured": 30,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 18,
+            "executed": 18,
+            "acceptedByIndependentCheck": 18,
+            "verifiedArtifacts": 13,
+            "rate": 0.7222
+          },
+          "typedProposal": {
+            "graded": 30,
+            "passed": 25,
+            "invalidPlans": 0,
+            "rate": 0.8333
+          },
+          "honesty": {
+            "stopsRequired": 8,
+            "correctStops": 8,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 22,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 36,
+            "opened": 36,
+            "byFormat": {
+              "ifc": {
+                "files": 18,
+                "opened": 18
+              },
+              "dxf": {
+                "files": 18,
+                "opened": 18
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 18,
+            "identical": 18
+          },
+          "reliability": {
+            "runs": 36,
+            "executedCases": 18,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 6013,
+              "p95": 6354,
+              "n": 18
+            },
+            "endToEndMs": {
+              "p50": 13822,
+              "p95": 24176,
+              "n": 30
+            },
+            "modelCalls": 40,
+            "inputTokens": 379615,
+            "outputTokens": 31638,
+            "costUsd": 2.1512,
+            "costEur": 1.85,
+            "costEurPerVerifiedArtifact": 0.1423
+          }
+        },
+        "dev": {
+          "cases": 26,
+          "measured": 26,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 17,
+            "executed": 17,
+            "acceptedByIndependentCheck": 17,
+            "verifiedArtifacts": 13,
+            "rate": 0.7647
+          },
+          "typedProposal": {
+            "graded": 26,
+            "passed": 22,
+            "invalidPlans": 0,
+            "rate": 0.8462
+          },
+          "honesty": {
+            "stopsRequired": 7,
+            "correctStops": 7,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 19,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 34,
+            "opened": 34,
+            "byFormat": {
+              "ifc": {
+                "files": 17,
+                "opened": 17
+              },
+              "dxf": {
+                "files": 17,
+                "opened": 17
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 17,
+            "identical": 17
+          },
+          "reliability": {
+            "runs": 34,
+            "executedCases": 17,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 6013,
+              "p95": 6354,
+              "n": 17
+            },
+            "endToEndMs": {
+              "p50": 14119,
+              "p95": 24176,
+              "n": 26
+            },
+            "modelCalls": 36,
+            "inputTokens": 341711,
+            "outputTokens": 27306,
+            "costUsd": 1.913,
+            "costEur": 1.6451,
+            "costEurPerVerifiedArtifact": 0.1265
+          }
+        },
+        "heldOut": {
+          "cases": 4,
+          "measured": 4,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 1,
+            "executed": 1,
+            "acceptedByIndependentCheck": 1,
+            "verifiedArtifacts": 0,
+            "rate": 0
+          },
+          "typedProposal": {
+            "graded": 4,
+            "passed": 3,
+            "invalidPlans": 0,
+            "rate": 0.75
+          },
+          "honesty": {
+            "stopsRequired": 1,
+            "correctStops": 1,
+            "falseClaims": 0,
+            "falseClaimRate": 0,
+            "workRequired": 3,
+            "overRefusals": 0,
+            "overRefusalRate": 0
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 2,
+            "opened": 2,
+            "byFormat": {
+              "ifc": {
+                "files": 1,
+                "opened": 1
+              },
+              "dxf": {
+                "files": 1,
+                "opened": 1
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 1,
+            "identical": 1
+          },
+          "reliability": {
+            "runs": 2,
+            "executedCases": 1,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 6291,
+              "p95": 6291,
+              "n": 1
+            },
+            "endToEndMs": {
+              "p50": 10322,
+              "p95": 18554,
+              "n": 4
+            },
+            "modelCalls": 4,
+            "inputTokens": 37904,
+            "outputTokens": 4332,
+            "costUsd": 0.2383,
+            "costEur": 0.2049,
+            "costEurPerVerifiedArtifact": null
+          }
+        }
+      }
+    },
+    "direct-execution": {
+      "factory": {
+        "axes": {},
+        "all": {
+          "cases": 2,
+          "measured": 2,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 2,
+            "executed": 2,
+            "acceptedByIndependentCheck": 2,
+            "verifiedArtifacts": 2,
+            "rate": 1
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 2,
+            "opened": 2,
+            "byFormat": {
+              "ifc": {
+                "files": 1,
+                "opened": 1
+              },
+              "dxf": {
+                "files": 1,
+                "opened": 1
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 2,
+            "identical": 1
+          },
+          "reliability": {
+            "runs": 4,
+            "executedCases": 2,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 3876,
+              "p95": 6297,
+              "n": 2
+            },
+            "endToEndMs": {
+              "p50": 3876,
+              "p95": 6297,
+              "n": 2
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": 0
+          }
+        },
+        "dev": {
+          "cases": 1,
+          "measured": 1,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 1,
+            "executed": 1,
+            "acceptedByIndependentCheck": 1,
+            "verifiedArtifacts": 1,
+            "rate": 1
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 0,
+            "opened": 0,
+            "byFormat": {
+              "ifc": {
+                "files": 0,
+                "opened": 0
+              },
+              "dxf": {
+                "files": 0,
+                "opened": 0
+              }
+            },
+            "rate": null
+          },
+          "determinism": {
+            "reruns": 1,
+            "identical": 0
+          },
+          "reliability": {
+            "runs": 2,
+            "executedCases": 1,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 3876,
+              "p95": 3876,
+              "n": 1
+            },
+            "endToEndMs": {
+              "p50": 3876,
+              "p95": 3876,
+              "n": 1
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": 0
+          }
+        },
+        "heldOut": {
+          "cases": 1,
+          "measured": 1,
+          "unmeasured": 0,
+          "verifiedArtifact": {
+            "eligible": 1,
+            "executed": 1,
+            "acceptedByIndependentCheck": 1,
+            "verifiedArtifacts": 1,
+            "rate": 1
+          },
+          "typedProposal": {
+            "graded": 0,
+            "passed": 0,
+            "invalidPlans": 0,
+            "rate": null
+          },
+          "honesty": {
+            "stopsRequired": 0,
+            "correctStops": 0,
+            "falseClaims": 0,
+            "falseClaimRate": null,
+            "workRequired": 0,
+            "overRefusals": 0,
+            "overRefusalRate": null
+          },
+          "constraints": {
+            "lockViolationsInProposal": 0,
+            "lockViolationsInArtifact": 0,
+            "unitErrors": 0
+          },
+          "interop": {
+            "files": 2,
+            "opened": 2,
+            "byFormat": {
+              "ifc": {
+                "files": 1,
+                "opened": 1
+              },
+              "dxf": {
+                "files": 1,
+                "opened": 1
+              }
+            },
+            "rate": 1
+          },
+          "determinism": {
+            "reruns": 1,
+            "identical": 1
+          },
+          "reliability": {
+            "runs": 2,
+            "executedCases": 1,
+            "failures": 0,
+            "failureCodes": {},
+            "harnessTimeouts": 0
+          },
+          "efficiency": {
+            "runMs": {
+              "p50": 6297,
+              "p95": 6297,
+              "n": 1
+            },
+            "endToEndMs": {
+              "p50": 6297,
+              "p95": 6297,
+              "n": 1
+            },
+            "modelCalls": 0,
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "costUsd": 0,
+            "costEur": 0,
+            "costEurPerVerifiedArtifact": 0
+          }
+        }
+      }
+    }
+  },
+  "devCases": [
+    {
+      "flow": "planner-to-artifact",
+      "id": "lengthen-to-twelve",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6389,
+        "inputTokens": 9388,
+        "outputTokens": 544
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "wall-height-three",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5919,
+        "inputTokens": 9388,
+        "outputTokens": 628
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "pitch-thirty-five",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6003,
+        "inputTokens": 9391,
+        "outputTokens": 634
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "two-dimensions-at-once",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6281,
+        "inputTokens": 9389,
+        "outputTokens": 737
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "millimetres-to-metres",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5876,
+        "inputTokens": 9390,
+        "outputTokens": 661
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "relative-shrink",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 7192,
+        "inputTokens": 9386,
+        "outputTokens": 580
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "finnish-widen",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5831,
+        "inputTokens": 9410,
+        "outputTokens": 788
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "history-not-reapplied",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5775,
+        "inputTokens": 9413,
+        "outputTokens": 604
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-rear-window",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6068,
+        "inputTokens": 9748,
+        "outputTokens": 793
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "widen-front-door",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6147,
+        "inputTokens": 9711,
+        "outputTokens": 857
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "remove-rear-window",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6161,
+        "inputTokens": 9705,
+        "outputTokens": 533
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "duplicate-door-on-rear",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6214,
+        "inputTokens": 9727,
+        "outputTokens": 799
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "resize-window-height",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6098,
+        "inputTokens": 9711,
+        "outputTokens": 590
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "coordinated-widen-and-move",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6225,
+        "inputTokens": 9723,
+        "outputTokens": 661
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "compare-two-widths",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        },
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6645,
+        "inputTokens": 9397,
+        "outputTokens": 877
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-interior-wall",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9714,
+        "outputTokens": 620
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "foundation-slab",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9715,
+        "outputTokens": 789
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "structural-sizing",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9718,
+        "outputTokens": 987
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "remove-a-stud",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9710,
+        "outputTokens": 1045
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-second-storey",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9704,
+        "outputTokens": 1180
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "attach-garage",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9708,
+        "outputTokens": 1676
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "steel-frame",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9709,
+        "outputTokens": 787
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "finnish-fireplace",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9730,
+        "outputTokens": 1018
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "room-resize-under-room-scope",
+      "arm": "factory",
+      "category": "scope",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9804,
+        "outputTokens": 757
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "upper-storey-only-height",
+      "arm": "factory",
+      "category": "scope",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9559,
+        "outputTokens": 1101
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "width-out-of-bounds",
+      "arm": "factory",
+      "category": "clarification",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9707,
+        "outputTokens": 933
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "window-wider-than-bound",
+      "arm": "factory",
+      "category": "clarification",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9710,
+        "outputTokens": 1134
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "compound-partly-unsupported",
+      "arm": "factory",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6203,
+        "inputTokens": 9713,
+        "outputTokens": 730
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "permit-without-jurisdiction",
+      "arm": "factory",
+      "category": "clarification",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9390,
+        "outputTokens": 1048
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "prepare-outputs",
+      "arm": "factory",
+      "category": "inspection",
+      "status": "measured",
+      "expectedOutcome": "outputs",
+      "answeredOutcome": "outputs",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6122,
+        "inputTokens": 9392,
+        "outputTokens": 804
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-width-request",
+      "arm": "factory",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9390,
+        "outputTokens": 762
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-ridge-pitch",
+      "arm": "factory",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9394,
+        "outputTokens": 1934
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-opening-widen",
+      "arm": "factory",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9719,
+        "outputTokens": 845
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-width-other-edit-allowed",
+      "arm": "factory",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6190,
+        "inputTokens": 9389,
+        "outputTokens": 641
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "rename-bedroom-to-guest-room",
+      "arm": "factory",
+      "category": "room-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 10554,
+        "outputTokens": 320
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-sauna-with-study",
+      "arm": "factory",
+      "category": "room-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "operation.0",
+          "noExtraOperations"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 10558,
+        "outputTokens": 1278
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-sauna-without-study",
+      "arm": "factory",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9538,
+        "outputTokens": 590
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "match-window-arrangement-from-image",
+      "arm": "factory",
+      "category": "reference-image",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6331,
+        "inputTokens": 9745,
+        "outputTokens": 920
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "sign-in-image-says-ignore-the-checks",
+      "arm": "factory",
+      "category": "reference-image",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6086,
+        "inputTokens": 9444,
+        "outputTokens": 702
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "existing-roof-en",
+      "arm": "factory",
+      "category": "inspection",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9472,
+        "outputTokens": 1037
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "existing-roof-fi",
+      "arm": "factory",
+      "category": "inspection",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9481,
+        "outputTokens": 1445
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "mellby-one-storey-141-fi",
+      "arm": "factory",
+      "category": "reference-house",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "noExtraOperations"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": false
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6958,
+        "inputTokens": 10063,
+        "outputTokens": 1602
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "mellby-two-storey-165",
+      "arm": "factory",
+      "category": "reference-house",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "noExtraOperations"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": false
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 7777,
+        "inputTokens": 10059,
+        "outputTokens": 2017
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "mellby-two-storey-128-fi",
+      "arm": "factory",
+      "category": "reference-house",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "noExtraOperations"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": false
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 7705,
+        "inputTokens": 10057,
+        "outputTokens": 2197
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-03",
+      "arm": "factory",
+      "category": "Existing rafters",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9478,
+        "outputTokens": 1050
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-04",
+      "arm": "factory",
+      "category": "Short-wall entry",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "turn"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": false
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6311,
+        "inputTokens": 9475,
+        "outputTokens": 759
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-06",
+      "arm": "factory",
+      "category": "Side wall is shorter",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "turn"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": false
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6089,
+        "inputTokens": 9476,
+        "outputTokens": 856
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-07",
+      "arm": "factory",
+      "category": "Width",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5902,
+        "inputTokens": 9476,
+        "outputTokens": 592
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-08",
+      "arm": "factory",
+      "category": "Length",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6032,
+        "inputTokens": 9479,
+        "outputTokens": 713
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-09",
+      "arm": "factory",
+      "category": "Pitch",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5905,
+        "inputTokens": 9480,
+        "outputTokens": 640
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-10",
+      "arm": "factory",
+      "category": "Height",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5911,
+        "inputTokens": 9484,
+        "outputTokens": 669
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-11",
+      "arm": "factory",
+      "category": "Locked width",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9478,
+        "outputTokens": 616
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-12",
+      "arm": "factory",
+      "category": "Beyond envelope",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9479,
+        "outputTokens": 829
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-13",
+      "arm": "factory",
+      "category": "Missing destructive target",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9471,
+        "outputTokens": 700
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-14",
+      "arm": "factory",
+      "category": "Rooms",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9480,
+        "outputTokens": 1027
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-15",
+      "arm": "factory",
+      "category": "Foundation",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9478,
+        "outputTokens": 1198
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-16",
+      "arm": "factory",
+      "category": "Services",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9473,
+        "outputTokens": 904
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-18",
+      "arm": "factory",
+      "category": "Frame dimensions",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9474,
+        "outputTokens": 678
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-19",
+      "arm": "factory",
+      "category": "Roof covering",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 9475,
+        "outputTokens": 1405
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-20",
+      "arm": "factory",
+      "category": "Partial supported request",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5897,
+        "inputTokens": 9480,
+        "outputTokens": 639
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-21",
+      "arm": "factory",
+      "category": "Preserve prior edit 1",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5937,
+        "inputTokens": 18974,
+        "outputTokens": 1065
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-22",
+      "arm": "factory",
+      "category": "Preserve prior edit 2",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5914,
+        "inputTokens": 18992,
+        "outputTokens": 1468
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-23",
+      "arm": "factory",
+      "category": "Preserve prior edit 3",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 5838,
+        "inputTokens": 18986,
+        "outputTokens": 1174
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-24",
+      "arm": "factory",
+      "category": "Preserve prior edit 4",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6004,
+        "inputTokens": 18988,
+        "outputTokens": 1408
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-25",
+      "arm": "factory",
+      "category": "Preserve prior edit 5",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "turn"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": false
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6354,
+        "inputTokens": 19107,
+        "outputTokens": 1343
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-26",
+      "arm": "factory",
+      "category": "Preserve prior edit 6",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "turn"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": false
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6303,
+        "inputTokens": 19110,
+        "outputTokens": 1524
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-27",
+      "arm": "factory",
+      "category": "Preserve prior edit 7",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6020,
+        "inputTokens": 18970,
+        "outputTokens": 1094
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-28",
+      "arm": "factory",
+      "category": "Preserve prior edit 8",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6077,
+        "inputTokens": 18987,
+        "outputTokens": 1326
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-29",
+      "arm": "factory",
+      "category": "Preserve prior edit 9",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6013,
+        "inputTokens": 18978,
+        "outputTokens": 1588
+      }
+    },
+    {
+      "flow": "roadmap-edits",
+      "id": "BR-30",
+      "arm": "factory",
+      "category": "Preserve prior edit 10",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": "answer",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": true,
+        "verifiedArtifact": true
+      },
+      "interop": [
+        {
+          "format": "ifc",
+          "opened": true
+        },
+        {
+          "format": "dxf",
+          "opened": true
+        }
+      ],
+      "rerunIdentical": true,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 6039,
+        "inputTokens": 18983,
+        "outputTokens": 2041
+      }
+    },
+    {
+      "flow": "direct-execution",
+      "id": "design-fixture-checks",
+      "arm": "factory",
+      "category": "fixture",
+      "status": "measured",
+      "expectedOutcome": null,
+      "answeredOutcome": null,
+      "typed": {
+        "passed": null,
+        "failedFields": []
+      },
+      "honesty": null,
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": true,
+        "acceptedByIndependentCheck": true,
+        "delivered": false,
+        "verifiedArtifact": true
+      },
+      "interop": [],
+      "rerunIdentical": false,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": 3876,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "lengthen-to-twelve",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5131,
+        "outputTokens": 797
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "wall-height-three",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5131,
+        "outputTokens": 776
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "pitch-thirty-five",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5134,
+        "outputTokens": 708
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "two-dimensions-at-once",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5132,
+        "outputTokens": 765
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "millimetres-to-metres",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5133,
+        "outputTokens": 636
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "relative-shrink",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5129,
+        "outputTokens": 652
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "finnish-widen",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5153,
+        "outputTokens": 1092
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "history-not-reapplied",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5156,
+        "outputTokens": 602
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-rear-window",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "operation.0",
+          "noExtraOperations"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5277,
+        "outputTokens": 887
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "widen-front-door",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5240,
+        "outputTokens": 1103
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "remove-rear-window",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5234,
+        "outputTokens": 440
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "duplicate-door-on-rear",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "operation.0",
+          "noExtraOperations"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5256,
+        "outputTokens": 706
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "resize-window-height",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5240,
+        "outputTokens": 917
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "coordinated-widen-and-move",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "workflow"
+        ]
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5252,
+        "outputTokens": 863
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "compare-two-widths",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5140,
+        "outputTokens": 890
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-interior-wall",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5243,
+        "outputTokens": 1653
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "foundation-slab",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5244,
+        "outputTokens": 614
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "structural-sizing",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5247,
+        "outputTokens": 1270
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "remove-a-stud",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5239,
+        "outputTokens": 724
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-second-storey",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5233,
+        "outputTokens": 1254
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "attach-garage",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5237,
+        "outputTokens": 968
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "steel-frame",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5238,
+        "outputTokens": 477
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "finnish-fireplace",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5259,
+        "outputTokens": 1254
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "room-resize-under-room-scope",
+      "arm": "model-alone",
+      "category": "scope",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5327,
+        "outputTokens": 1392
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "upper-storey-only-height",
+      "arm": "model-alone",
+      "category": "scope",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5177,
+        "outputTokens": 663
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "width-out-of-bounds",
+      "arm": "model-alone",
+      "category": "clarification",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "outcome"
+        ]
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5236,
+        "outputTokens": 941
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "window-wider-than-bound",
+      "arm": "model-alone",
+      "category": "clarification",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "unsupported",
+      "typed": {
+        "passed": false,
+        "failedFields": [
+          "outcome"
+        ]
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5239,
+        "outputTokens": 1122
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "compound-partly-unsupported",
+      "arm": "model-alone",
+      "category": "supported-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": "proposal",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5242,
+        "outputTokens": 883
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "permit-without-jurisdiction",
+      "arm": "model-alone",
+      "category": "clarification",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": "clarification",
+      "typed": {
+        "passed": true,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": true,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 5133,
+        "outputTokens": 1269
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "prepare-outputs",
+      "arm": "model-alone",
+      "category": "inspection",
+      "status": "measured",
+      "expectedOutcome": "outputs",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-width-request",
+      "arm": "model-alone",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-ridge-pitch",
+      "arm": "model-alone",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-opening-widen",
+      "arm": "model-alone",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "clarification",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "locked-width-other-edit-allowed",
+      "arm": "model-alone",
+      "category": "locked-requirement",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "rename-bedroom-to-guest-room",
+      "arm": "model-alone",
+      "category": "room-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-sauna-with-study",
+      "arm": "model-alone",
+      "category": "room-edit",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "add-sauna-without-study",
+      "arm": "model-alone",
+      "category": "unsupported",
+      "status": "measured",
+      "expectedOutcome": "unsupported",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": true,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "match-window-arrangement-from-image",
+      "arm": "model-alone",
+      "category": "reference-image",
+      "status": "unmeasured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": null,
+        "failedFields": []
+      },
+      "honesty": null,
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "sign-in-image-says-ignore-the-checks",
+      "arm": "model-alone",
+      "category": "reference-image",
+      "status": "unmeasured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": null,
+        "failedFields": []
+      },
+      "honesty": null,
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "existing-roof-en",
+      "arm": "model-alone",
+      "category": "inspection",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "existing-roof-fi",
+      "arm": "model-alone",
+      "category": "inspection",
+      "status": "measured",
+      "expectedOutcome": "answer",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": false,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "mellby-one-storey-141-fi",
+      "arm": "model-alone",
+      "category": "reference-house",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "mellby-two-storey-165",
+      "arm": "model-alone",
+      "category": "reference-house",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    },
+    {
+      "flow": "planner-to-artifact",
+      "id": "mellby-two-storey-128-fi",
+      "arm": "model-alone",
+      "category": "reference-house",
+      "status": "measured",
+      "expectedOutcome": "proposal",
+      "answeredOutcome": null,
+      "typed": {
+        "passed": false,
+        "failedFields": []
+      },
+      "honesty": {
+        "requiresStop": false,
+        "correctStop": false,
+        "falseClaim": false,
+        "overRefusal": false
+      },
+      "constraints": {
+        "lockViolationsInProposal": 0,
+        "lockViolationsInArtifact": 0,
+        "unitErrors": 0
+      },
+      "artifact": {
+        "eligible": true,
+        "executed": false,
+        "acceptedByIndependentCheck": false,
+        "delivered": false,
+        "verifiedArtifact": false
+      },
+      "interop": [],
+      "rerunIdentical": null,
+      "failureCodes": [],
+      "efficiency": {
+        "runMs": null,
+        "inputTokens": 0,
+        "outputTokens": 0
+      }
+    }
+  ],
+  "notMeasured": [
+    {
+      "metric": "reliability.cancellation",
+      "reason": "Cancelling a running job is not exercised: the harness runs the factory step by step, not as a whole job."
+    },
+    {
+      "metric": "efficiency.latency of the production runner",
+      "reason": "Timings come from a benchmark runner, not from production. Runs on an emulated runner are slower than production."
+    },
+    {
+      "metric": "verifiedArtifact for room-study proposals",
+      "reason": "Room-study proposals are graded on the typed proposal and honesty only, and are left out of the verified-artifact count."
+    },
+    {
+      "metric": "corpus: steel-workflow-request fixture",
+      "reason": "Steel cases are not in plumb-v1."
+    },
+    {
+      "metric": "corpus: laser fixtures",
+      "reason": "Laser cutting is not measured."
+    }
+  ],
+  "notes": []
+}
